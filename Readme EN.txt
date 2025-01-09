@@ -1,0 +1,1 @@
+Project to modify HB/IFE F14 Tomcat to have option of female "Jester" voice. Switch of the voice should be in Jester Menu ingame. Sounds used are from DCS mod Complete Jester Voice Replacement by TheSimNet.
