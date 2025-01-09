@@ -5,11 +5,23 @@ počet jesterových wwise eventů v xml:
 
 SimObjects\Airplanes\IndiaFoxtEcho_F14A\panel
 
+
+==================================================
+%%%%%%%%%       Jester.xml       %%%%%%%%%%%%%%%%%
+==================================================
+
 Složka Jester - pouze xml, které má souvislost se zvukama, zjistit jak funguje - je číslo před JesterSoundToBePlayed číslo souboru wim v knihovně?
 Na konci Jester.xml je přiřazování proměnných
 JesterSoundToBePlayed - 429x
 
 v přiřazení 220
+
+>>>>>Nebude asi nic nutné měnit
+
+
+==================================================
+%%%%%%%%%       Jester MENU      %%%%%%%%%%%%%%%%%
+==================================================
 
 F14MENU - Menu Jestera - F14Menu.xml a F14MenuRIO.xml jsou layouty menu a definice proměnných (např. názvy obrázků), dva soubory xxxControl.xml jsou logika menu 
 
@@ -17,6 +29,28 @@ F14MENU - Menu Jestera - F14Menu.xml a F14MenuRIO.xml jsou layouty menu a defini
 &gt; stands for the greater-than sign: >
 &le; stands for the less-than or equals sign: ≤
 &ge; stands for the greater-than or equals sign: ≥
+
+>>>>>Tady bude nutné přidat do menu tlačítko pro změnu wizza a podle toho i upravit menu, nadefinovat proměnnou která přenese informaci do sound.xml
+>>>>>Tímto začat
+
+
+===============================================
+%%%%%%%%%       Sound.xml     %%%%%%%%%%%%%%%%%
+===============================================
+
+Zde se musí odehrát logika jestli má mluvit Jester, nebo ženská, dle hodnoty v proměnné z menuControl.xml
+
+
+=================================================
+%%%%%%%%%       layout.json     %%%%%%%%%%%%%%%%%
+=================================================
+
+https://github.com/HughesMDflyer4/MSFSLayoutGenerator
+
+
+================================================================
+%%%%%%%%%       Obecné návody a informace      %%%%%%%%%%%%%%%%%
+================================================================
 
 if cykly https://www.fsdeveloper.com/forum/threads/how-to-if-statement-in-xml.289803/
 
