@@ -1,0 +1,27 @@
+Local variables na konci SimObjects/Airplanes/IndiaFoxtEcho_F14x/systems.cfg
+
+počet jesterových wwise eventů v xml:
+318
+
+SimObjects\Airplanes\IndiaFoxtEcho_F14A\panel
+
+Složka Jester - pouze xml, které má souvislost se zvukama, zjistit jak funguje - je číslo před JesterSoundToBePlayed číslo souboru wim v knihovně?
+Na konci Jester.xml je přiřazování proměnných
+JesterSoundToBePlayed - 429x
+
+v přiřazení 220
+
+F14MENU - Menu Jestera - F14Menu.xml a F14MenuRIO.xml jsou layouty menu a definice proměnných (např. názvy obrázků), dva soubory xxxControl.xml jsou logika menu 
+
+&lt; stands for the less-than sign: <
+&gt; stands for the greater-than sign: >
+&le; stands for the less-than or equals sign: ≤
+&ge; stands for the greater-than or equals sign: ≥
+
+if cykly https://www.fsdeveloper.com/forum/threads/how-to-if-statement-in-xml.289803/
+
+https://en.wikipedia.org/wiki/Reverse_Polish_notation
+
+práce se zvuky: https://docs.flightsimulator.com/html/Content_Configuration/Sounds/Sound_Examples.htm#h5
+
+https://devsupport.flightsimulator.com/t/triggering-a-sound-event-from-regular-code/4526/2
