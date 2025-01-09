@@ -25,10 +25,7 @@ v přiřazení 220
 
 F14MENU - Menu Jestera - F14Menu.xml a F14MenuRIO.xml jsou layouty menu a definice proměnných (např. názvy obrázků), dva soubory xxxControl.xml jsou logika menu 
 
-&lt; stands for the less-than sign: <
-&gt; stands for the greater-than sign: >
-&le; stands for the less-than or equals sign: ≤
-&ge; stands for the greater-than or equals sign: ≥
+proměnná MenuMode určuje v které úrovni menu se člověk nachází. Menu má položky 1-8, podsekce skáče o řád pro pol. 1 je to  10, pro 2 20 atd.
 
 >>>>>Tady bude nutné přidat do menu tlačítko pro změnu wizza a podle toho i upravit menu, nadefinovat proměnnou která přenese informaci do sound.xml
 >>>>>Tímto začat
@@ -51,6 +48,12 @@ https://github.com/HughesMDflyer4/MSFSLayoutGenerator
 ================================================================
 %%%%%%%%%       Obecné návody a informace      %%%%%%%%%%%%%%%%%
 ================================================================
+
+&lt; stands for the less-than sign: <
+&gt; stands for the greater-than sign: >
+&le; stands for the less-than or equals sign: ≤
+&ge; stands for the greater-than or equals sign: ≥
+
 
 if cykly https://www.fsdeveloper.com/forum/threads/how-to-if-statement-in-xml.289803/
 

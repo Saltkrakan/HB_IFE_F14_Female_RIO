@@ -1,0 +1,1088 @@
+<Gauge Name="EmptyGauge" Version="1.0">
+
+<Comment>
+(L:PhaseOfFlight, enum)
+0 = Generic
+1 = Power Up
+2 = Before Takeoff
+3 = Takeoff
+4 = Cruise
+5 = Before landing
+6 = After landing
+7 = Shutdown
+</Comment>  
+
+<Element>
+<Select>
+<Value>
+0 (>L:MenuRIOIcon1, enum)
+0 (>L:MenuRIOIcon2, enum)
+0 (>L:MenuRIOIcon3, enum)
+0 (>L:MenuRIOIcon4, enum)
+0 (>L:MenuRIOIcon5, enum)
+0 (>L:MenuRIOIcon6, enum)
+0 (>L:MenuRIOIcon7, enum)
+0 (>L:MenuRIOIcon8, enum)
+</Value>
+</Select>
+</Element>
+
+<Comment>
+TIMER - IF NO MENU INTERACTION IT DISAPPEARS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOVisible,bool) (L:MenuRIOVisibleTimer,number) 0 &gt; if{ 
+(L:MenuRIOVisibleTimer,number) 1 + (>L:MenuRIOVisibleTimer,number)
+}
+(L:MenuRIOVisibleTimer,number) 360 &gt; if{ 
+0 (>L:MenuRIOVisible,bool) 0 (>L:MenuRIOVisibleTimer,number)
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+PHASE OF FLIGHT
+
+<Element>
+<Select>
+<Value>
+(A:SIM ON GROUND, bool) (L:ElectricalPower, bool) ! and (A:SURFACE RELATIVE GROUND SPEED, Feet per second) 0.2 &lt; and (L:PhaseOfFlight, enum) 0 == and if{ 1 (>L:PhaseOfFlight, enum) 1 (>L:MenuRIOMode) }
+(A:SIM ON GROUND, bool) ! (A:Gear left position,percent) 10 &lt; and (A:Radio height,feet) 500 &gt; and if{ 4 (>L:PhaseOfFlight, enum) 4 (>L:MenuRIOMode) }
+</Value>
+</Select>
+</Element>
+
+</Comment>
+
+<Comment>
+MAIN MENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 0 == if{
+(A:SIM ON GROUND, bool) ! if{ 70 (>L:MenuRIOIcon1, enum) 70 (>L:MenuRIOIcon2, enum) 70 (>L:MenuRIOIcon3, enum) }
+3 (>L:MenuRIOIcon4, enum)
+7 (>L:MenuRIOIcon5, enum)
+2 (>L:MenuRIOIcon6, enum)
+9 (>L:MenuRIOIcon7, enum)
+1 (>L:MenuRIOIcon8, enum)
+}
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 1 == and (A:SIM ON GROUND, bool) ! and if{ 1 (>K:AP_MASTER, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 2 == and (A:SIM ON GROUND, bool) ! and if{ 1 (>K:AP_HDG_HOLD_ON) 91 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 3 == and (A:SIM ON GROUND, bool) ! and if{ 
+1 (>L:SwitchAutopilotALT, bool) 1 (>L:APReferenceIsPressed, bool) 92 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) 
+(A:Autopilot altitude lock var, feet) 1000 &lt; if{ (A:Indicated altitude,feet) (>K:AP_ALT_VAR_SET_ENGLISH) }
+}
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 4 == and if{ 20 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 5 == and if{ 30 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 6 == and if{ 60 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 7 == and if{ 70 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 8 == and if{ 80 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 0 == (L:OptionRIOSelected, enum) 9 == and if{ 0 (>L:MenuRIOVisible,bool) 0 (>L:OptionRIOSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+<Comment>
+IF IN CHECKLIST MODE, ROLL BACK TO MAIN MENU IN ANY CASE
+</Comment>
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 10 == (L:OptionRIOSelected, enum) 9 == and if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+IS ASSISTED START AVAILABLE
+</Comment>
+
+<Element>
+<Select>
+<Value>
+(A:ENG N2 RPM:1, percent) 20 &lt; (A:ENG N2 RPM:2, percent) 20 &lt; and (A:SIM ON GROUND, bool) and if{ 1 (>L:AssistedStartAvailable,bool) } els{ 0 (>L:AssistedStartAvailable,bool) } 
+</Value>
+</Select>
+</Element>
+
+<Comment>
+IF ASSITED CHECKLIST IS RUNNING
+</Comment>
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 10 == (L:AssistedChecklistRunning, bool) and if{ 11 (>L:MenuRIOMode, enum) }
+</Value>
+</Select>
+</Element>
+
+
+
+
+<Comment>
+CHECKLISTS IF NO ASSISTED CHECKLIST IS RUNNING
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 10 == (L:AssistedStartAvailable,bool) and  if{ 
+5 (>L:MenuRIOIcon2, enum)
+5 (>L:MenuRIOIcon3, enum) 
+5 (>L:MenuRIOIcon4, enum)
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>L:AssistedChecklistRunning, bool) 2100 (>L:AssistedChecklistItem, number) 0 (>L:CarrierProcedure, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 1 (>L:AssistedChecklistRunning, bool) 1100 (>L:AssistedChecklistItem, number) 0 (>L:CarrierProcedure, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ 1 (>L:AssistedChecklistRunning, bool) 1100 (>L:AssistedChecklistItem, number) 1 (>L:CarrierProcedure, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+CHECKLISTS IF ASSISTED CHECKLIST IS RUNNING
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 11 == if{
+51 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 7 == if{ 10 (>L:MenuRIOMode, enum) 0 (>L:AssistedChecklistRunning, bool)  0 (>L:OptionRIOSelected, enum) 1 (>L:AbortChecklistSounds,bool) (L:AbortStartup, bool) ! (>L:AbortStartup, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+NAVIGATION
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 20 == if{
+(L:Waypoint1Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 20 (>L:MenuRIOIcon1, enum) } els{ 0 (>L:MenuRIOIcon1, enum)  }
+(L:Waypoint2Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 20 (>L:MenuRIOIcon2, enum) } els{ 0 (>L:MenuRIOIcon2, enum)  }
+(L:Waypoint3Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 20 (>L:MenuRIOIcon3, enum) } els{ 0 (>L:MenuRIOIcon3, enum)  }
+(L:Waypoint4Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 21 (>L:MenuRIOIcon4, enum) } els{ 0 (>L:MenuRIOIcon4, enum)  }
+(L:Waypoint5Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 22 (>L:MenuRIOIcon5, enum) } els{ 0 (>L:MenuRIOIcon5, enum)  }
+(L:Waypoint6Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 23 (>L:MenuRIOIcon6, enum) } els{ 0 (>L:MenuRIOIcon6, enum)  }
+(L:HomeBaseValid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and if{ 24 (>L:MenuRIOIcon7, enum) } els{ 0 (>L:MenuRIOIcon7, enum)  }
+1 if{ 3 (>L:MenuRIOIcon8, enum) } els{ 0 (>L:MenuRIOIcon8, enum)  }
+
+(L:Waypoint1Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 1 == and if{ 0 (>L:RIOKnobDest,number) (L:SwitchDestinationSound1, bool) ! (>L:SwitchDestinationSound1, bool) }
+(L:Waypoint2Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 2 == and if{ 1 (>L:RIOKnobDest,number) (L:SwitchDestinationSound2, bool) ! (>L:SwitchDestinationSound2, bool) }
+(L:Waypoint3Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 3 == and if{ 2 (>L:RIOKnobDest,number) (L:SwitchDestinationSound3, bool) ! (>L:SwitchDestinationSound3, bool) }
+(L:Waypoint4Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 4 == and if{ 3 (>L:RIOKnobDest,number) (L:SwitchDestinationSound4, bool) ! (>L:SwitchDestinationSound4, bool) }
+(L:Waypoint5Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 5 == and if{ 4 (>L:RIOKnobDest,number) (L:SwitchDestinationSound5, bool) ! (>L:SwitchDestinationSound5, bool) }
+(L:Waypoint6Valid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 6 == and if{ 5 (>L:RIOKnobDest,number) (L:SwitchDestinationSound6, bool) ! (>L:SwitchDestinationSound6, bool) }
+(L:HomeBaseValid,bool) (L:NavigationAlignmentComplete,bool) 0 &gt; and (L:OptionRIOSelected, enum) 7 == and if{ 6 (>L:RIOKnobDest,number) (L:SwitchDestinationSound7, bool) ! (>L:SwitchDestinationSound7, bool) }
+(L:OptionRIOSelected, enum) 8 == if{ 21 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+NAVIGATION SUBMENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 21 == if{
+3 (>L:MenuRIOIcon2, enum)
+3 (>L:MenuRIOIcon3, enum)
+3 (>L:MenuRIOIcon4, enum)
+3 (>L:MenuRIOIcon7, enum)
+
+(L:OptionRIOSelected, enum) 2 == if{ 
+0 (>L:OptionRIOSelected, enum) 
+(A:PLANE LATITUDE, degrees) (>L:HBLatitude, degrees)
+(A:PLANE LONGITUDE, degrees) (>L:HBLongitude, degrees)
+1 (>L:HomeBaseValid, bool)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+
+(L:OptionRIOSelected, enum) 3 == if{ 22 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+
+(L:OptionRIOSelected, enum) 4 == if{ 
+(L:RIOKnobDest,number) 0 == if{ 0 (>L:Waypoint1Valid, bool) }
+(L:RIOKnobDest,number) 1 == if{ 0 (>L:Waypoint2Valid, bool) }
+(L:RIOKnobDest,number) 2 == if{ 0 (>L:Waypoint3Valid, bool) }
+(L:RIOKnobDest,number) 3 == if{ 0 (>L:Waypoint4Valid, bool) }
+(L:RIOKnobDest,number) 4 == if{ 0 (>L:Waypoint5Valid, bool) }
+(L:RIOKnobDest,number) 5 == if{ 0 (>L:Waypoint6Valid, bool) }
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) 
+}
+
+
+(L:OptionRIOSelected, enum) 7 == if{ 
+13000 (>L:AlignmentTimer, number)
+3 (>L:NavigationAlignmentComplete,enum)
+100 (>L:AlignmentPercent, number)
+(A:PLANE LATITUDE, degrees) (>L:OwnshipLatitude, degrees) 
+(A:PLANE LONGITUDE, degrees) (>L:OwnshipLongitude, degrees)
+(A:PLANE LATITUDE, degrees) (>L:InitialLatitude,degrees)
+(A:PLANE LONGITUDE, degrees) (>L:InitialLongitude,degrees)
+0 (>L:InitialLatitudeError, degrees) 
+0 (>L:InitialLongitudeError, degrees)
+0 (>L:OptionRIOSelected, enum) 
+(L:HomeBaseValid, bool) ! if{
+(A:PLANE LATITUDE, degrees) (>L:HBLatitude, degrees)
+(A:PLANE LONGITUDE, degrees) (>L:HBLongitude, degrees)
+1 (>L:HomeBaseValid, bool)
+}
+}
+
+
+(L:OptionRIOSelected, enum) 9 == if{ 20 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+WAYPOINTS SUBMENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 22 == if{
+20 (>L:MenuRIOIcon1, enum)
+20 (>L:MenuRIOIcon2, enum)
+20 (>L:MenuRIOIcon3, enum)
+21 (>L:MenuRIOIcon4, enum)
+22 (>L:MenuRIOIcon5, enum)
+23 (>L:MenuRIOIcon6, enum)
+25 (>L:MenuRIOIcon7, enum)
+26 (>L:MenuRIOIcon8, enum)
+
+(L:OptionRIOSelected, enum) 1 == if{ (A:PLANE LATITUDE, degrees) (>L:WP1Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP1Lon, degrees) 1 (>L:Waypoint1Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ (A:PLANE LATITUDE, degrees) (>L:WP2Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP2Lon, degrees) 1 (>L:Waypoint2Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ (A:PLANE LATITUDE, degrees) (>L:WP3Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP3Lon, degrees) 1 (>L:Waypoint3Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ (A:PLANE LATITUDE, degrees) (>L:WP4Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP4Lon, degrees) 1 (>L:Waypoint4Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ (A:PLANE LATITUDE, degrees) (>L:WP5Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP5Lon, degrees) 1 (>L:Waypoint5Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 6 == if{ (A:PLANE LATITUDE, degrees) (>L:WP6Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP6Lon, degrees) 1 (>L:Waypoint6Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ (A:PLANE LATITUDE, degrees) (>L:WP7Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP7Lon, degrees) 1 (>L:Waypoint7Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 8 == if{ (A:PLANE LATITUDE, degrees) (>L:WP8Lat, degrees) (A:PLANE LONGITUDE, degrees) (>L:WP8Lon, degrees) 1 (>L:Waypoint8Valid, bool) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+
+(L:OptionRIOSelected, enum) 9 == if{ 21 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+
+
+
+<Comment>
+TACAN
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 30 == if{
+7 (>L:MenuRIOIcon1, enum)
+7 (>L:MenuRIOIcon2, enum)
+7 (>L:MenuRIOIcon3, enum)
+7 (>L:MenuRIOIcon4, enum)
+7 (>L:MenuRIOIcon5, enum)
+7 (>L:MenuRIOIcon6, enum)
+7 (>L:MenuRIOIcon7, enum)
+71 (>L:MenuRIOIcon8, enum)
+
+(L:OptionRIOSelected, enum) 1 == if{ (L:TacanSelector, number) 1 + (>L:TacanSelector, number) (L:TacanSelector, number) 4 &gt; if{ 0 (>L:TacanSelector, number) } 1 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ (A:TACAN ACTIVE CHANNEL:1,number) 10 + (>K:TACAN1_ACTIVE_CHANNEL_SET)  0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ (A:TACAN ACTIVE CHANNEL:1,number) 10 - (>K:TACAN1_ACTIVE_CHANNEL_SET)  0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ (A:TACAN ACTIVE CHANNEL:1,number) 1 + (>K:TACAN1_ACTIVE_CHANNEL_SET)  0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 5 == if{ (A:TACAN ACTIVE CHANNEL:1,number) 1 - (>K:TACAN1_ACTIVE_CHANNEL_SET)  0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 6 == if{ (A:TACAN ACTIVE MODE:1, bool) ! (>K:TACAN1_ACTIVE_MODE_SET)  0 (>L:TacanNFOControl, bool) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 31 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 8 == if{ 34 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+TACAN GROUND PRESETS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 31 == if{
+
+0 (>L:MenuRIOIcon1, enum)
+0 (>L:MenuRIOIcon2, enum)
+7 (>L:MenuRIOIcon3, enum)
+0 (>L:MenuRIOIcon4, enum)
+0 (>L:MenuRIOIcon5, enum)
+0 (>L:MenuRIOIcon6, enum)
+7 (>L:MenuRIOIcon7, enum)
+0 (>L:MenuRIOIcon8, enum)
+(L:OptionRIOSelected, enum) 3 == if{ 32 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 33 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 30 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+EAST COAST
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 32 == if{
+
+7 (>L:MenuRIOIcon1, enum)
+7 (>L:MenuRIOIcon2, enum)
+7 (>L:MenuRIOIcon3, enum)
+7 (>L:MenuRIOIcon4, enum)
+7 (>L:MenuRIOIcon5, enum)
+7 (>L:MenuRIOIcon6, enum)
+7 (>L:MenuRIOIcon7, enum)
+7 (>L:MenuRIOIcon8, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 113 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ 116 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 70 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ 39 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ 119 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 6 == if{ 79 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ 19 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 8 == if{ 117 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 31 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+WEST COAST
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 33 == if{
+
+7 (>L:MenuRIOIcon1, enum)
+7 (>L:MenuRIOIcon2, enum)
+7 (>L:MenuRIOIcon3, enum)
+7 (>L:MenuRIOIcon4, enum)
+7 (>L:MenuRIOIcon5, enum)
+7 (>L:MenuRIOIcon6, enum)
+7 (>L:MenuRIOIcon7, enum)
+7 (>L:MenuRIOIcon8, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 33 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ 117 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 43 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ 82 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ 111 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 6 == if{ 85 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ 53 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 8 == if{ 12 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 31 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+
+<Comment>
+TACAN CV MENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 34 == if{
+71 (>L:MenuRIOIcon2, enum)
+71 (>L:MenuRIOIcon3, enum)
+71 (>L:MenuRIOIcon4, enum)
+71 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 2 == if{ 35 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ 36 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 37 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 38 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 30 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+FORRESTAL PRESETS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 35 == if{
+71 (>L:MenuRIOIcon1, enum)
+71 (>L:MenuRIOIcon3, enum)
+71 (>L:MenuRIOIcon5, enum)
+71 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 49 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 50 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ 51 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ 52 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 34 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+NIMITZ PRESETS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 36 == if{
+
+71 (>L:MenuRIOIcon3, enum)
+71 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 3 == if{ 88 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 109.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ 89 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 34 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+FORD PRESETS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 37 == if{
+
+71 (>L:MenuRIOIcon1, enum)
+71 (>L:MenuRIOIcon3, enum)
+71 (>L:MenuRIOIcon5, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 78 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 79 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ 80 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 108.500 (>L:ILS_Freq, Mhz) (L:ILS_Freq, Frequency BCD16) (>K:NAV1_RADIO_SET) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 34 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+MILTECH PRESETS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 38 == if{
+
+71 (>L:MenuRIOIcon3, enum)
+71 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 3 == if{ 78 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 110950000 (>K:NAV1_RADIO_SET_HZ) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ 79 (>K:TACAN1_ACTIVE_CHANNEL_SET) 0 (>K:TACAN1_ACTIVE_MODE_SET) 110950000 (>K:NAV1_RADIO_SET_HZ) 0 (>L:TacanNFOControl, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 34 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+
+
+
+
+<Comment>
+TID
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 40 == if{
+6 (>L:MenuRIOIcon1, enum)
+6 (>L:MenuRIOIcon2, enum)
+6 (>L:MenuRIOIcon3, enum)
+6 (>L:MenuRIOIcon4, enum)
+6 (>L:MenuRIOIcon5, enum)
+6 (>L:MenuRIOIcon6, enum)
+6 (>L:MenuRIOIcon7, enum)
+
+(L:OptionRIOSelected, enum) 1 == if{ (L:RIOKnobRANGE,number) 1 + 4 min (>L:RIOKnobRANGE,number) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ (L:RIOKnobRANGE,number) 1 - 0 max (>L:RIOKnobRANGE,number) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ (L:RIOKnobTIDMode,bool) ! (>L:RIOKnobTIDMode,bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ (L:RIOLightALTNUM, bool) ! (>L:RIOLightALTNUM, bool) ! 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ (L:RIOLightSYMELEM, bool) ! (>L:RIOLightSYMELEM, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 6 == if{ (L:RIOLightVELVECTOR, bool) ! (>L:RIOLightVELVECTOR, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 7 == if{ (L:RIOSwitchWCS, enum) 1 + (>L:RIOSwitchWCS, enum) (L:RIOSwitchWCS, enum) 3 == if{ 0 (>L:RIOSwitchWCS, enum) } 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) 
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+RADAR
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 50 == if{
+(L:RioSwitchWCS,enum) 2 == (A:SIM ON GROUND, bool) ! and if{ 50 (>L:MenuRIOIcon1, enum) 50 (>L:MenuRIOIcon2, enum) 50 (>L:MenuRIOIcon8, enum) } els{ 0 (>L:MenuRIOIcon1, enum) 0 (>L:MenuRIOIcon2, enum) 0 (>L:MenuRIOIcon8, enum) }
+4 (>L:MenuRIOIcon3, enum)
+4 (>L:MenuRIOIcon4, enum)
+4 (>L:MenuRIOIcon5, enum)
+4 (>L:MenuRIOIcon6, enum)
+4 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 1 == if{ (L:TargetNumber, number) 1 + (>L:TargetNumber, number) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ (L:TargetNumber, number) 1 - (>L:TargetNumber, number)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ 51 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 52 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 5 == if{ 53 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 6 == if{ 54 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 55 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 8 == (L:RioSwitchWCS,enum) 2 == and (A:SIM ON GROUND, bool) ! and if{ 0 (>L:TargetNumber, number)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+RADAR RANGE
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 51 == if{
+4 (>L:MenuRIOIcon1, enum)
+4 (>L:MenuRIOIcon2, enum)
+4 (>L:MenuRIOIcon3, enum)
+4 (>L:MenuRIOIcon4, enum)
+4 (>L:MenuRIOIcon5, enum)
+4 (>L:MenuRIOIcon6, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 5 (>L:RadarRange, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ 10 (>L:RadarRange, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 20 (>L:RadarRange, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ 50 (>L:RadarRange, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 5 == if{ 100 (>L:RadarRange, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 6 == if{ 200 (>L:RadarRange, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 50 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+RADAR BARS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 52 == if{
+4 (>L:MenuRIOIcon1, enum)
+4 (>L:MenuRIOIcon2, enum)
+4 (>L:MenuRIOIcon3, enum)
+4 (>L:MenuRIOIcon4, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 0 (>L:RIOKnobRadarElevationBars,number) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>L:RIOKnobRadarElevationBars,number) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 2 (>L:RIOKnobRadarElevationBars,number) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ 3 (>L:RIOKnobRadarElevationBars,number) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 50 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+RADAR WIDTH
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 53 == if{
+4 (>L:MenuRIOIcon1, enum)
+4 (>L:MenuRIOIcon2, enum)
+4 (>L:MenuRIOIcon3, enum)
+4 (>L:MenuRIOIcon4, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 0 (>L:RIOKnobRadarBeamWidth, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>L:RIOKnobRadarBeamWidth, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 3 == if{ 2 (>L:RIOKnobRadarBeamWidth, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 4 == if{ 3 (>L:RIOKnobRadarBeamWidth, enum) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 50 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+RADAR AZ AND EL
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 54 == if{
+4 (>L:MenuRIOIcon1, enum)
+4 (>L:MenuRIOIcon2, enum)
+4 (>L:MenuRIOIcon3, enum)
+4 (>L:MenuRIOIcon4, enum)
+4 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 1 == if{ (L:RadarCenterAzimuth,degree) 5 + 60 min (>L:RadarCenterAzimuth,degree) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ (L:RadarCenterAzimuth,degree) 5 - -60 max (>L:RadarCenterAzimuth,degree) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ (L:RadarCenterElevation,degree) 2 + 60 min (>L:RadarCenterElevation,degree) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ (L:RadarCenterElevation,degree) 2 - -60 max (>L:RadarCenterElevation,degree) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 0 (>L:RadarCenterAzimuth,degree) 0 (>L:RadarCenterElevation,degree) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 50 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+RADAR MODES
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 55 == if{
+
+(L:RioSwitchWCS,enum) 2 == (A:SIM ON GROUND, bool) ! and (L:TargetNumber, number) 0 &gt; and (L:ElectricalPowerAvailable, bool) and if{ 4 (>L:MenuRIOIcon1, enum) 4 (>L:MenuRIOIcon2, enum) }
+(L:RioSwitchWCS,enum) 1 &gt; (L:ElectricalPowerAvailable, bool) and if{
+4 (>L:MenuRIOIcon3, enum)
+4 (>L:MenuRIOIcon4, enum)
+4 (>L:MenuRIOIcon5, enum)
+4 (>L:MenuRIOIcon6, enum)
+4 (>L:MenuRIOIcon7, enum)
+}
+4 (>L:MenuRIOIcon8, enum)
+
+(L:RioSwitchWCS,enum) 2 == (A:SIM ON GROUND, bool) ! and (L:TargetNumber, number) 0 &gt; and (L:ElectricalPowerAvailable, bool) and if{
+(L:OptionRIOSelected, enum) 1 == if{ 0 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+
+(L:RioSwitchWCS,enum) 1 &gt; (L:ElectricalPowerAvailable, bool) and if{
+(L:OptionRIOSelected, enum) 3 == if{ 2 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 3 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 5 == if{ 4 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 6 == if{ 5 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 6 (>L:WCSMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+
+(L:OptionRIOSelected, enum) 8 == if{ (L:RIOSwitchWCS, enum) 1 + (>L:RIOSwitchWCS, enum) (L:RIOSwitchWCS, enum) 3 == if{ 0 (>L:RIOSwitchWCS, enum) } 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:OptionRIOSelected, enum) 9 == if{ 50 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+COMM AND IFF
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 60 == if{
+2 (>L:MenuRIOIcon1, enum)
+2 (>L:MenuRIOIcon2, enum)
+63 (>L:MenuRIOIcon3, enum)
+64 (>L:MenuRIOIcon4, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 61 (>L:MenuRIOMode, enum)  3 (L:knobCOM1Mode, number) == if{ 1 (>L:knobCOM1Mode, number) } 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ 62 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ 63 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 64 (>L:MenuRIOMode, enum)  3 (>L:knobCOM1Mode, number) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 0 (>L:MenuRIOMode, enum)  0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+COM1 SUBMENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 61 == if{
+2 (>L:MenuRIOIcon1, enum)
+2 (>L:MenuRIOIcon2, enum)
+2 (>L:MenuRIOIcon3, enum)
+2 (>L:MenuRIOIcon4, enum)
+2 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 1 (>K:COM_RADIO_WHOLE_INC) 0 (>L:OptionRIOSelected, enum) 1 (>L:knobCOM1Frequency,number) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>K:COM_RADIO_WHOLE_DEC) 0 (>L:OptionRIOSelected, enum) 1 (>L:knobCOM1Frequency,number) }
+(L:OptionRIOSelected, enum) 3 == if{ 1 (>K:COM_RADIO_FRACT_INC) 0 (>L:OptionRIOSelected, enum) 1 (>L:knobCOM1Frequency,number) }
+(L:OptionRIOSelected, enum) 4 == if{ 1 (>K:COM_RADIO_FRACT_DEC) 0 (>L:OptionRIOSelected, enum) 1 (>L:knobCOM1Frequency,number) }
+(L:OptionRIOSelected, enum) 7 == if{ (L:knobCOM1Mode, number) 1 + (>L:knobCOM1Mode, number) (L:knobCOM1Mode, number) 3 &gt; if{ 0 (>L:knobCOM1Mode, number) } }
+(L:OptionRIOSelected, enum) 9 == if{ 60 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 61 == (L:knobCOM1Mode, number) 3 == and if{ 64 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+COM2 SUBMENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 62 == if{
+2 (>L:MenuRIOIcon1, enum)
+2 (>L:MenuRIOIcon2, enum)
+2 (>L:MenuRIOIcon3, enum)
+2 (>L:MenuRIOIcon4, enum)
+2 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 1 (>K:COM2_RADIO_WHOLE_INC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>K:COM2_RADIO_WHOLE_DEC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ 1 (>K:COM2_RADIO_FRACT_INC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 1 (>K:COM2_RADIO_FRACT_DEC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ (L:knobCOM2Mode, number) 1 + (>L:knobCOM2Mode, number) (L:knobCOM2Mode, number) 3 &gt; if{ 0 (>L:knobCOM2Mode, number) } }
+(L:OptionRIOSelected, enum) 9 == if{ 60 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+IFF SUBMENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 63 == if{
+63 (>L:MenuRIOIcon1, enum)
+63 (>L:MenuRIOIcon2, enum)
+63 (>L:MenuRIOIcon3, enum)
+63 (>L:MenuRIOIcon4, enum)
+63 (>L:MenuRIOIcon5, enum)
+63 (>L:MenuRIOIcon6, enum)
+63 (>L:MenuRIOIcon7, enum)
+63 (>L:MenuRIOIcon8, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 1 (>K:XPNDR_1000_INC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>K:XPNDR_1000_DEC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ 1 (>K:XPNDR_100_INC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 1 (>K:XPNDR_100_DEC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 5 == if{ 1 (>K:XPNDR_10_INC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 6 == if{ 1 (>K:XPNDR_10_DEC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ 1 (>K:XPNDR_1_INC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 8 == if{ 1 (>K:XPNDR_1_DEC) 0 (>L:OptionRIOSelected, enum) 3 (>L:IFFKnobMode, number) 3 (>A:TRANSPONDER STATE, enum) }
+(L:OptionRIOSelected, enum) 9 == if{ 60 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+<Comment>
+ADF SUBMENU
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 64 == if{
+64 (>L:MenuRIOIcon1, enum)
+64 (>L:MenuRIOIcon2, enum)
+64 (>L:MenuRIOIcon3, enum)
+64 (>L:MenuRIOIcon4, enum)
+64 (>L:MenuRIOIcon5, enum)
+64 (>L:MenuRIOIcon6, enum)
+2 (>L:MenuRIOIcon7, enum)
+(L:OptionRIOSelected, enum) 1 == if{ 1 (>K:ADF_1_INC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 2 == if{ 1 (>K:ADF_1_DEC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 3 == if{ 1 (>K:ADF_10_INC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 4 == if{ 1 (>K:ADF_10_DEC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 5 == if{ 1 (>K:ADF_100_INC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 6 == if{ 1 (>K:ADF_100_DEC) 0 (>L:OptionRIOSelected, enum) }
+(L:OptionRIOSelected, enum) 7 == if{ (L:knobCOM1Mode, number) 1 + (>L:knobCOM1Mode, number) (L:knobCOM1Mode, number) 3 &gt; if{ 0 (>L:knobCOM1Mode, number) } }
+(L:OptionRIOSelected, enum) 9 == if{ 60 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 64 == (L:knobCOM1Mode, number) 3 != and if{ 61 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+}
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+CONFIGURATION
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 70 == if{
+31 (>L:MenuRIOIcon1, enum)
+31 (>L:MenuRIOIcon2, enum)
+(L:isPacifist, bool) ! if{
+9 (>L:MenuRIOIcon3, enum)
+9 (>L:MenuRIOIcon4, enum)
+9 (>L:MenuRIOIcon5, enum)
+9 (>L:MenuRIOIcon6, enum)
+30 (>L:MenuRIOIcon7, enum)
+30 (>L:MenuRIOIcon8, enum)
+}
+}
+
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 1 == and if{ 
+0 (>A:PAYLOAD STATION WEIGHT:3, pounds) 0 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+0 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+0 (>A:PAYLOAD STATION WEIGHT:6, pounds) 0 (>A:PAYLOAD STATION WEIGHT:7, pounds) 0 (>A:PAYLOAD STATION WEIGHT:8, pounds) 0 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+0 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+0 (>A:PAYLOAD STATION WEIGHT:11, pounds) 0 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 2 == and if{ 
+0 (>A:PAYLOAD STATION WEIGHT:3, pounds) 0 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+0 (>A:PAYLOAD STATION WEIGHT:6, pounds) 0 (>A:PAYLOAD STATION WEIGHT:7, pounds) 0 (>A:PAYLOAD STATION WEIGHT:8, pounds) 0 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+0 (>A:PAYLOAD STATION WEIGHT:11, pounds) 0 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 3 == and (L:isPacifist, bool) !  and if{ 
+196 (>A:PAYLOAD STATION WEIGHT:3, pounds) 296 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+509 (>A:PAYLOAD STATION WEIGHT:6, pounds) 509 (>A:PAYLOAD STATION WEIGHT:7, pounds) 509 (>A:PAYLOAD STATION WEIGHT:8, pounds) 509 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+296 (>A:PAYLOAD STATION WEIGHT:11, pounds) 196 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 4 == and (L:isPacifist, bool) !  and if{ 
+196 (>A:PAYLOAD STATION WEIGHT:3, pounds) 609 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+509 (>A:PAYLOAD STATION WEIGHT:6, pounds) 509 (>A:PAYLOAD STATION WEIGHT:7, pounds) 509 (>A:PAYLOAD STATION WEIGHT:8, pounds) 509 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+609 (>A:PAYLOAD STATION WEIGHT:11, pounds) 196 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 5 == and (L:isPacifist, bool) !  and if{ 
+196 (>A:PAYLOAD STATION WEIGHT:3, pounds) 609 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+1331 (>A:PAYLOAD STATION WEIGHT:6, pounds) 1331 (>A:PAYLOAD STATION WEIGHT:7, pounds) 1331 (>A:PAYLOAD STATION WEIGHT:8, pounds) 1331 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+609 (>A:PAYLOAD STATION WEIGHT:11, pounds) 196 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 6 == and (L:isPacifist, bool) !  and if{ 
+196 (>A:PAYLOAD STATION WEIGHT:3, pounds) 1129 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+1331 (>A:PAYLOAD STATION WEIGHT:6, pounds) 1331 (>A:PAYLOAD STATION WEIGHT:7, pounds) 1331 (>A:PAYLOAD STATION WEIGHT:8, pounds) 1331 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+1129 (>A:PAYLOAD STATION WEIGHT:11, pounds) 196 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 7 == and (L:isPacifist, bool) !  and if{ 
+196 (>A:PAYLOAD STATION WEIGHT:3, pounds) 609 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+820 (>A:PAYLOAD STATION WEIGHT:6, pounds) 509 (>A:PAYLOAD STATION WEIGHT:7, pounds) 0 (>A:PAYLOAD STATION WEIGHT:8, pounds) 820 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+505 (>A:PAYLOAD STATION WEIGHT:11, pounds) 196 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 8 == and (L:isPacifist, bool) !  and if{ 
+196 (>A:PAYLOAD STATION WEIGHT:3, pounds) 609 (>A:PAYLOAD STATION WEIGHT:4, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:5, pounds) 
+820 (>A:PAYLOAD STATION WEIGHT:6, pounds) 820 (>A:PAYLOAD STATION WEIGHT:7, pounds) 820 (>A:PAYLOAD STATION WEIGHT:8, pounds) 820 (>A:PAYLOAD STATION WEIGHT:9, pounds)
+381 (>A:PAYLOAD STATION WEIGHT:10, pounds)
+505 (>A:PAYLOAD STATION WEIGHT:11, pounds) 196 (>A:PAYLOAD STATION WEIGHT:12, pounds)
+0 (>L:OptionSelected, enum)
+0 (>L:JettisonTimer,number)
+(L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool)
+}
+(L:MenuMode, enum) 70 == (L:OptionSelected, enum) 9 == and if{ 0 (>L:MenuMode, enum) 0 (>L:OptionSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+
+
+<Comment>
+MAINTEINANCE
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 80 == if{
+(A:SURFACE RELATIVE GROUND SPEED, Knots) 1 &lt; (A:SIM ON GROUND, bool) and if{ 1 (>L:MenuRIOIcon1, enum) } els{ 0 (>L:MenuRIOIcon1, enum) }
+1 (>L:MenuRIOIcon2, enum)
+(A:SURFACE RELATIVE GROUND SPEED, feet/second) 0.5 &lt; (A:SIM ON GROUND, bool) and (A:BRAKE PARKING POSITION,percent) 1 &gt; and if{ 1 (>L:MenuRIOIcon3, enum) } els{ 0 (>L:MenuRIOIcon3, enum) }
+(A:EXTERNAL POWER ON:0, bool) ! (A:ENG N2 RPM:1, percent) 1 &lt; and (A:ENG N2 RPM:2, percent) 1 &lt; and (A:SIM ON GROUND, bool) and (A:SURFACE RELATIVE GROUND SPEED, feet/second) 0.5 &lt; and if{ 1 (>L:MenuRIOIcon4, enum) } els{ 0 (>L:MenuRIOIcon4, enum) }
+0 (>L:MenuRIOIcon5, enum)
+0 (>L:MenuRIOIcon6, enum)
+1 (>L:MenuRIOIcon7, enum)
+0 (>L:MenuRIOIcon8, enum)
+}
+(L:MenuRIOMode, enum) 80 == (L:OptionRIOSelected, enum) 1 == and (A:SURFACE RELATIVE GROUND SPEED, Knots) 1 &lt; and if{ 1 (>K:TOGGLE_EXTERNAL_POWER, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 80 == (L:OptionRIOSelected, enum) 2 == and if{ 1 (>K:REPAIR_AND_REFUEL, bool) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+
+(L:MenuRIOMode, enum) 80 == (L:OptionRIOSelected, enum) 3 == and
+(A:SURFACE RELATIVE GROUND SPEED, feet/second) 0.5 &lt; and
+(A:SIM ON GROUND, bool) and (A:BRAKE PARKING POSITION,percent) 1 &gt; and 
+if{ (L:Wheelchocks, bool) ! (>L:Wheelchocks, bool) }
+
+(L:MenuRIOMode, enum) 80 == (L:OptionRIOSelected, enum) 4 == and
+(A:EXTERNAL POWER ON:0, bool) ! and (A:ENG N2 RPM:1, percent) 1 &lt; and (A:ENG N2 RPM:2, percent) 1 &lt; and (A:SIM ON GROUND, bool) and (A:SURFACE RELATIVE GROUND SPEED, feet/second) 0.5 &lt; and
+if{ (L:EngineCovers, bool) ! (>L:EngineCovers, bool) }
+
+(L:MenuRIOMode, enum) 80 == (L:OptionRIOSelected, enum) 7 == and if{ 81 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 80 == (L:OptionRIOSelected, enum) 9 == and if{ 0 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+AUTOPILOT HEADING
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 91 == if{
+70 (>L:MenuRIOIcon1, enum)
+70 (>L:MenuRIOIcon2, enum)
+70 (>L:MenuRIOIcon3, enum)
+(A:TACAN STATION TOFROM:1, enum) 0 &gt; if{ 70 (>L:MenuRIOIcon4, enum) }
+(L:TargetNumber, number) 1 &gt; if{ 70 (>L:MenuRIOIcon5, enum) }
+70 (>L:MenuRIOIcon6, enum)
+70 (>L:MenuRIOIcon7, enum)
+70 (>L:MenuRIOIcon8, enum)
+}
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 1 == and (A:SIM ON GROUND, bool) ! and if{ (A:PLANE HEADING DEGREES MAGNETIC,degrees) (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 2 == and (A:SIM ON GROUND, bool) ! and if{ (A:Autopilot heading lock dir,degrees) 1 + dnor (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 3 == and (A:SIM ON GROUND, bool) ! and if{ (A:Autopilot heading lock dir,degrees) 10 + dnor (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 4 == and (A:SIM ON GROUND, bool) ! and (A:TACAN STATION TOFROM:1, enum) 0 &gt; and if{ (A:TACAN STATION RADIAL:1,degrees) 180 + dnor (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 5 == and (A:SIM ON GROUND, bool) ! and (L:TargetNumber, number) 1 &gt; and if{ (L:TargetBearing, degrees) (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 6 == and (A:SIM ON GROUND, bool) ! and if{ (L:SelectedDestinationBearing,degrees) (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 7 == and (A:SIM ON GROUND, bool) ! and if{ (A:Autopilot heading lock dir,degrees) 10 - dnor (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 8 == and (A:SIM ON GROUND, bool) ! and if{ (A:Autopilot heading lock dir,degrees) 1 - (>K:HEADING_BUG_SET) 0 (>L:OptionRIOSelected, enum) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) }
+(L:MenuRIOMode, enum) 91 == (L:OptionRIOSelected, enum) 9 == and if{ 0 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+<Comment>
+AUTOPILOT ALTITUDE
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 92 == if{
+70 (>L:MenuRIOIcon1, enum)
+70 (>L:MenuRIOIcon2, enum)
+70 (>L:MenuRIOIcon3, enum)
+70 (>L:MenuRIOIcon4, enum)
+70 (>L:MenuRIOIcon5, enum)
+70 (>L:MenuRIOIcon6, enum)
+(L:TargetNumber, number) 1 &gt; if{ 70 (>L:MenuRIOIcon7, enum) }
+70 (>L:MenuRIOIcon8, enum)
+}
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 1 == and if{ (A:Autopilot altitude lock var, feet) 1000 + 60000 min (>K:AP_ALT_VAR_SET_ENGLISH) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 2 == and if{ (A:Autopilot altitude lock var, feet) 100 + 60000 min (>K:AP_ALT_VAR_SET_ENGLISH) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 3 == and if{ (A:INDICATED ALTITUDE,feet) (>K:AP_ALT_VAR_SET_ENGLISH) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 4 == and if{ (A:Autopilot altitude lock var, feet) 100 - 1000 max (>K:AP_ALT_VAR_SET_ENGLISH) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 5 == and if{ (A:Autopilot altitude lock var, feet) 1000 - 1000 max (>K:AP_ALT_VAR_SET_ENGLISH) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 6 == and if{ (A:Autopilot altitude lock var, feet) 5000 - 1000 max (>K:AP_ALT_VAR_SET_ENGLISH) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 7 == and (L:TargetNumber, number) 1 &gt; and if{ (L:TargetAltitude, feet) (>K:AP_ALT_VAR_SET_ENGLISH) (L:MenuRogerSound, bool) ! (>L:MenuRogerSound, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 8 == and if{ (A:Autopilot altitude lock var, feet) 5000 + 60000 min (>K:AP_ALT_VAR_SET_ENGLISH) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 92 == (L:OptionRIOSelected, enum) 9 == and if{ 0 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+<Comment>
+OptionRIOS
+</Comment> 
+
+<Element>
+<Select>
+<Value>
+(L:MenuRIOMode, enum) 81 == if{
+1 (>L:MenuRIOIcon1, enum)
+1 (>L:MenuRIOIcon2, enum)
+1 (>L:MenuRIOIcon3, enum)
+1 (>L:MenuRIOIcon4, enum)
+1 (>L:MenuRIOIcon5, enum)
+}
+
+(L:MenuRIOMode, enum) 81 == (L:OptionRIOSelected, enum) 1 == and if{ (L:EyeOfSauron) ! (>L:EyeOfSauron) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 81 == (L:OptionRIOSelected, enum) 2 == and if{ (L:JesterVoiceDisable, bool) ! (>L:JesterVoiceDisable, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 81 == (L:OptionRIOSelected, enum) 3 == and if{ (L:SDKTailhookOnly, bool) ! (>L:SDKTailhookOnly, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 81 == (L:OptionRIOSelected, enum) 4 == and if{ (L:RioSelfEjectionDisabled, bool) ! (>L:RioSelfEjectionDisabled, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 81 == (L:OptionRIOSelected, enum) 5 == and if{ (L:CrewBoardingLadderRetracted, bool) ! (>L:CrewBoardingLadderRetracted, bool) 0 (>L:OptionRIOSelected, enum) }
+(L:MenuRIOMode, enum) 81 == (L:OptionRIOSelected, enum) 9 == and if{ 80 (>L:MenuRIOMode, enum) 0 (>L:OptionRIOSelected, enum) }
+</Value>
+</Select>
+</Element>
+
+
+<Comment>
+RESET SELECTED VARIABLE
+</Comment>
+
+<Element>
+<Select>
+<Value>
+(L:OptionRIOSelected, enum) 0 &gt; if{ 0 (>L:OptionRIOSelected, enum) }
+0 (>L:GUISound, bool)
+</Value>
+</Select>
+</Element>
+
+</Gauge>
+
