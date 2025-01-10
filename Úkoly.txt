@@ -1,0 +1,11 @@
+Prozkoumat jak funguje menu Jestera, zvuky a vymyslet nejlepší cestu jak to změnit, ideálně aby šlo přepínat přímo v menu ve hře
+
+HOTOVO - Udělat projektu git hub
+HOTOVO - Stáhnout git hub desktop na PC se simulátorem a naklonovat repozitář
+HOTOVO - Udělat soubor se seznamem změněných souborů
+HOTOVO - Udělat zvlášť složku s upraveným tomcatem s jiným názvem
+HOTOVO - Udělat ikonky do menu
+Rozchodit přepínač v Jester menu
+Připravit zvuky
+Spojit zvuky a přepínač
+Požádat borca co vytvořil JestHer o svolení použít audio (až to bude trochu fungovat).

@@ -27,6 +27,8 @@ F14MENU - Menu Jestera - F14Menu.xml a F14MenuRIO.xml jsou layouty menu a defini
 
 proměnná MenuMode určuje v které úrovni menu se člověk nachází. Menu má položky 1-8, podsekce skáče o řád pro pol. 1 je to  10, pro 2 20 atd.
 
+Jsou tu proměnnáé MenuIcon 1-8. Podle toho jakou mají číselnou hodnotu tak zobrazují příslušnou ikonku, přiřazenou v F14Menu.xml
+
 >>>>>Tady bude nutné přidat do menu tlačítko pro změnu wizza a podle toho i upravit menu, nadefinovat proměnnou která přenese informaci do sound.xml
 >>>>>Tímto začat
 
@@ -36,6 +38,15 @@ proměnná MenuMode určuje v které úrovni menu se člověk nachází. Menu m�
 ===============================================
 
 Zde se musí odehrát logika jestli má mluvit Jester, nebo ženská, dle hodnoty v proměnné z menuControl.xml
+
+
+=================================================
+%%%%%%%%%       systems.cfg     %%%%%%%%%%%%%%%%%
+=================================================
+
+Tady přidat proměnnou pro male/female RIO (do obou pro A i B)
+
+Prý je eště soubor states.cfg (někde), kde se ukládá hodnota proměnné pro příště
 
 
 =================================================
