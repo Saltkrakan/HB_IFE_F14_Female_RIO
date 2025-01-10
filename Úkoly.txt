@@ -5,7 +5,10 @@ HOTOVO - Stáhnout git hub desktop na PC se simulátorem a naklonovat repozitá�
 HOTOVO - Udělat soubor se seznamem změněných souborů
 HOTOVO - Udělat zvlášť složku s upraveným tomcatem s jiným názvem
 HOTOVO - Udělat ikonky do menu
-Rozchodit přepínač v Jester menu
+HOTOVO - Rozchodit přepínač v Jester menu
+HOTOVO - Vyřešit proč nejde jít zpět z menu 80
+HOTOVO - Opravit chybu na obrázku skates (nasvětlení přilby leze do okraje)
+Udělat seznam ID zvuků dle jester.xml
 Připravit zvuky
 Spojit zvuky a přepínač
 Požádat borca co vytvořil JestHer o svolení použít audio (až to bude trochu fungovat).
