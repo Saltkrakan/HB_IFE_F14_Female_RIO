@@ -1,0 +1,1 @@
+- aircraft.cfg in both folders (for A and B variant)
