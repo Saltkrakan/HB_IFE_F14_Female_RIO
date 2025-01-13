@@ -72,4 +72,6 @@ https://en.wikipedia.org/wiki/Reverse_Polish_notation
 
 práce se zvuky: https://docs.flightsimulator.com/html/Content_Configuration/Sounds/Sound_Examples.htm#h5
 
+Náhodné zvuky: https://docs.flightsimulator.com/html/Content_Configuration/Sounds/Wave_Data_Sounds_Properties.htm
+
 https://devsupport.flightsimulator.com/t/triggering-a-sound-event-from-regular-code/4526/2
