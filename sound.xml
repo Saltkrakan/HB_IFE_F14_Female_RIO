@@ -1605,20 +1605,13 @@ lever_generic_small_01
 
 <Sound WwiseData="true" WwiseEvent="UIClick" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="UIClickSound"/>	 	  
 
-<!--<Sound WwiseData="true" WwiseEvent="Menu_Roger" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuRogerSound" /> 
-	
-	<Requires LocalVar="RioFemale">
-		<Range LowerBound="0" UpperBound="0" />
-    </Requires>
-</Sound>--> 
-
 <Sound WwiseData="true" WwiseEvent="Menu_Roger" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuRogerSound" > 
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="0.0" UpperBound="0.0" />
     </Requires>
 </Sound>
 
-<Sound WwiseData="false" WwiseEvent="custom_sound_01" FileName="roger11" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuRogerSound" >
+<Sound WwiseData="false" WwiseEvent="Menu_Roger_01" FileName="roger11" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuRogerSound" >
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
@@ -1626,12 +1619,12 @@ lever_generic_small_01
 
 <Sound WwiseData="true" WwiseEvent="Menu_Wilco" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuWilcoSound" >
 	<Requires LocalVar="RioFemale">
-		<Range LowerBound="0" UpperBound="0" />
+		<Range LowerBound="0.0" UpperBound="0.0" />
     </Requires>
 </Sound>
-<Sound WwiseData="false" WwiseEvent="Menu_Wilco" FileName="wilco4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuWilcoSound" >
+<Sound WwiseData="false" WwiseEvent="Menu_Wilco_01" FileName="wilco4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuWilcoSound" >
 	<Requires LocalVar="RioFemale">
-		<Range LowerBound="1" UpperBound="1" />
+		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
 
@@ -1651,12 +1644,12 @@ lever_generic_small_01
 
 <Sound WwiseData="true" WwiseEvent="GenericAcknowledgement" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="GenericAcknowledgementSound" >
 	<Requires LocalVar="RioFemale">
-		<Range LowerBound="0" UpperBound="0" />
+		<Range LowerBound="0.0" UpperBound="0.0" />
     </Requires>
 </Sound>
-<Sound WwiseData="false" WwiseEvent="GenericAcknowledgement" FileName="roger38" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="GenericAcknowledgementSound" >	
+<Sound WwiseData="false" WwiseEvent="GenericAcknowledgement_01" FileName="roger38" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="GenericAcknowledgementSound" >	
 	<Requires LocalVar="RioFemale">
-		<Range LowerBound="1" UpperBound="1" />
+		<Range LowerBound="1.1" UpperBound="1.1" />
     </Requires>
 </Sound>
 
