@@ -7,3 +7,4 @@
 - MENU_SKATES.png - new nametag for menu
 - MenuWizzoM.png - new icon for menu item (male)
 - MenuWizzoF.png - new icon for menu item (female)
+- Sounds.xml
