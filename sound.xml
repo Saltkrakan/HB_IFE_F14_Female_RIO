@@ -1718,9 +1718,39 @@ lever_generic_small_01
 
 <!-- JESTER LANDING ========================================================================================== --> 
 
-<Sound WwiseData="true" WwiseEvent="Landing_GoodLanding" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingGood"> <Range LowerBound="0.5" /> </Sound>		
-<Sound WwiseData="true" WwiseEvent="Landing_HardLanding" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHard"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_HardTrap" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHardTrap"> <Range LowerBound="0.5" /> </Sound>	 
+<Sound WwiseData="true" WwiseEvent="Landing_GoodLanding" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingGood"> <Range LowerBound="0.5" > 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_GoodLanding_01" FileName="goodlanding1,goodlanding2,goodlanding3,goodlanding4,goodlanding5,goodlanding6,goodlanding7,goodlanding8,goodlanding9,goodlanding10,goodlanding11,goodlanding12,goodlanding13,goodlanding14,goodlanding15,goodlanding16,goodlanding17,goodlanding18,goodlanding19,goodlanding20,goodlanding21,goodlanding22,goodlanding23,goodlanding24" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingGood"> <Range LowerBound="0.5" > 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>	
+		
+<Sound WwiseData="true" WwiseEvent="Landing_HardLanding" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHard"> <Range LowerBound="0.5" > 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>	
+<Sound WwiseData="false" WwiseEvent="Landing_HardLanding_01" FileName="hardlanding1,hardlanding2,hardlanding3,hardlanding4,hardlanding5,hardlanding6,hardlanding7,hardlanding8,hardlanding9" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHard"> <Range LowerBound="0.5" > 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Landing_HardTrap" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHardTrap"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_HardTrap_01" FileName="hardtrap1,hardtrap2,hardtrap3,hardtrap4,hardtrap5,hardtrap6,hardtrap7,hardtrap8,hardtrap9,hardtrap10,hardtrap11,hardtrap12,hardtrap13" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHardTrap"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>	
+	 
 <Sound WwiseData="true" WwiseEvent="Landing_Wire1" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding1Wire"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Wire2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding2Wire"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Wire3" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding3Wire"> <Range LowerBound="0.5" /> </Sound>	
