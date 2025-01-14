@@ -1727,8 +1727,7 @@ lever_generic_small_01
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
-</Sound>	
-		
+</Sound>
 <Sound WwiseData="true" WwiseEvent="Landing_HardLanding" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHard"> <Range LowerBound="0.5" > 
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="0.0" UpperBound="0.0" />
@@ -1739,7 +1738,6 @@ lever_generic_small_01
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
-
 <Sound WwiseData="true" WwiseEvent="Landing_HardTrap" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLandingHardTrap"> <Range LowerBound="0.5" >
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="0.0" UpperBound="0.0" />
@@ -1750,11 +1748,46 @@ lever_generic_small_01
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>	
-	 
-<Sound WwiseData="true" WwiseEvent="Landing_Wire1" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding1Wire"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Wire2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding2Wire"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Wire3" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding3Wire"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Wire4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding4Wire"> <Range LowerBound="0.5" /> </Sound>	
+<Sound WwiseData="true" WwiseEvent="Landing_Wire1" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding1Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Wire1_01" FileName="1wire1,1wire2,1wire3,1wire4,1wire5,1wire6,1wire7,1wire8,1wire9,1wire10,1wire11,1wire12,1wire13,1wire14,1wire15,1wire16,1wire17,1wire18,1wire19,1wire20,1wire21,1wire22,1wire23,1wire24,1wire25,1wire26,1wire27,1wire28,1wire29,1wire30,1wire31,1wire32,1wire33,1wire34,1wire35,1wire36,1wire37,1wire38,1wire39,1wire40,1wire41,1wire42,1wire43,1wire44,1wire45,1wire46,1wire47,1wire48,1wire49,1wire50,1wire51,1wire52,1wire53,1wire54,1wire55" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding1Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>	
+<Sound WwiseData="true" WwiseEvent="Landing_Wire2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding2Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Wire2_01" FileName="2wire1,2wire2,2wire3,2wire4,2wire5,2wire6,2wire7,2wire8,2wire9,2wire10,2wire11,2wire12,2wire13,2wire14,2wire15,2wire16,2wire17,2wire18,2wire19,2wire20,2wire21,2wire22,2wire23,2wire24,2wire25,2wire26,2wire27,2wire28,2wire29,2wire30,2wire31,2wire32,2wire33,2wire34,2wire35,2wire36,2wire37" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding2Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>	
+<Sound WwiseData="true" WwiseEvent="Landing_Wire3" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding3Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Wire3_01" FileName="3wire1,3wire2,3wire3,3wire4,3wire5,3wire6,3wire7,3wire8,3wire9,3wire10,3wire11,3wire12,3wire13,3wire14,3wire15,3wire16,3wire17,3wire18,3wire19,3wire20,3wire21,3wire22,3wire23,3wire24,3wire25,3wire26,3wire27,3wire28,3wire29,3wire30,3wire31,3wire32,3wire33,3wire34,3wire35,3wire36,3wire37,3wire38,3wire39,3wire40,3wire41,3wire42,3wire43,3wire44,3wire45,3wire46,3wire47,3wire48,3wire49,3wire50,3wire51,3wire52,3wire53,3wire54,3wire55,3wire56,3wire57,3wire58,3wire59,3wire60,3wire61,3wire62,3wire63,3wire64,3wire65,3wire66" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding3Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Landing_Wire4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding4Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Wire4_01" FileName="4wire1,4wire2,4wire3,4wire4,4wire5,4wire6,4wire7,4wire8,4wire9,4wire10,4wire11,4wire12,4wire13,4wire14,4wire15,4wire16,4wire17,4wire18,4wire19,4wire20,4wire21,4wire22,4wire23,4wire24,4wire25,4wire26,4wire27,4wire28,4wire29,4wire30,4wire31,4wire32,4wire33,4wire34,4wire35,4wire36,4wire37,4wire38,4wire39,4wire40,4wire41,4wire42,4wire43,4wire44,4wire45,4wire46,4wire47,4wire48,4wire49,4wire50,4wire51,4wire52,4wire53,4wire54" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding4Wire"> <Range LowerBound="0.5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude10" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude20" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude30" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding30"> <Range LowerBound="0.5" /> </Sound>	
