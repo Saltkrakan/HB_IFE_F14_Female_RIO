@@ -1789,11 +1789,55 @@ lever_generic_small_01
     </Requires>
 </Sound>
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude10" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Altitude10_01" FileName="10ft1,10ft2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Landing_Altitude20" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Altitude20_01" FileName="20ft1,20ft2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Landing_Altitude30" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding30"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Altitude30_01" FileName="30ft1,30ft2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding30"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Landing_Altitude40" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding40"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Altitude40_01" FileName="40ft1,40ft2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding40"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Landing_Altitude50" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding50"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Landing_Altitude50_01" FileName="50ft1,50ft2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding50"> <Range LowerBound="0.5" />
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
 </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Altitude20" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Altitude30" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding30"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Altitude40" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding40"> <Range LowerBound="0.5" /> </Sound>	
-<Sound WwiseData="true" WwiseEvent="Landing_Altitude50" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding50"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude100" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding100"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude150" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding150"> <Range LowerBound="0.5" /> </Sound>	
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude200" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding200"> <Range LowerBound="0.5" /> </Sound>	
