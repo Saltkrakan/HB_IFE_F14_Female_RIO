@@ -1611,7 +1611,7 @@ lever_generic_small_01
     </Requires>
 </Sound>
 
-<Sound WwiseData="false" WwiseEvent="Menu_Roger_01" FileName="roger11" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuRogerSound" >
+<Sound WwiseData="false" WwiseEvent="Menu_Roger_01" FileName="roger,roger1,roger2,roger3,roger4,roger5,roger6,roger7,roger8,roger9,roger10,roger11,roger12,roger13,roger14,roger15,roger16,roger17,roger18,roger19,roger20,roger21,roger22,roger23,roger24,roger25,roger26,roger27,roger28,roger29,roger30,roger31,roger32,roger33,roger34,roger35,roger36,roger37,roger38,roger39,roger40,roger41,roger42,roger43,roger44,roger45,roger46,roger47,roger48,roger49,roger50,roger51,roger52,roger53,roger54,roger55,roger56,roger57,roger58,roger59,roger60,roger61,roger62,roger63,roger64,roger65,roger66,roger67,roger68,roger69,roger70,roger71,roger72,roger73,roger74,roger75,roger76,roger77,roger78,roger79,roger80,roger81,roger82,roger83,roger84,roger85,roger86,roger87,roger88,roger89,roger90,roger91,roger92,roger93,roger94,roger95,roger96,roger97,roger98,roger99,roger100,roger101,roger102,roger103,roger104,roger105,roger106,roger107,roger108,roger109,roger110,roger111,roger112,roger113,roger114,roger115,roger116,roger117,roger118,roger119,roger120,roger121,roger122,roger123,roger124,roger125,roger126,roger127,roger128,roger129,roger130,roger131,copy1,copy2,copy3,copy4,copy5,copy6,copy7,copy8,copy9,copy10,copy11,copy12,copy13,copy14,copy15,copy16,copy17,copy18,copy19,copy20,copy21,copy22,copy23,copy24,copy25,copy26,copy27,copy28,copy29,copy30,copy31,copy32,copy33,copy34,copy35,copy36,copy37,copy38,copy39,copy40,copy41,copy42,copy43,copy44,copy45,copy46,copy47,copy48,copy49,copy50,copy51,copy52,copy53,copy54,copy55,copy56,copy57,copy58,copy59,wilco,wilco1,wilco2,wilco3,wilco4,wilco5,wilco6,wilco7,wilco8,wilco9,wilco10,wilco11,wilco12,wilco13,wilco14,wilco15,wilco16,wilco17" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuRogerSound" >
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
@@ -1622,25 +1622,88 @@ lever_generic_small_01
 		<Range LowerBound="0.0" UpperBound="0.0" />
     </Requires>
 </Sound>
-<Sound WwiseData="false" WwiseEvent="Menu_Wilco_01" FileName="wilco4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuWilcoSound" >
+<Sound WwiseData="false" WwiseEvent="Menu_Wilco_01" FileName="wilco,wilco1,wilco2,wilco3,wilco4,wilco5,wilco6,wilco7,wilco8,wilco9,wilco10,wilco11,wilco12,wilco13,wilco14,wilco15,wilco16,wilco17" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="MenuWilcoSound" >
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
 
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToWP1" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound1" />	 	  
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToWP1" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound1" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToWP1_01" FileName="switch1ststeerpoint1,switch1ststeerpoint2,switch1ststeerpoint3,switch1ststeerpoint4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound1" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>  	  
 
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToWP2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound2" />
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToWP2" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound2" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToWP2_01" FileName="switch2ndsteerpoint1,switch2ndsteerpoint2,switch2ndsteerpoint3,switch2ndsteerpoint4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound2" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
 	
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToWP3" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound3" />	
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToWP3" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound3" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToWP3_01" FileName="switch3rdsteerpoint1,switch3rdsteerpoint2,switch3rdsteerpoint3,switch3rdsteerpoint4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound3" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>	
 
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToFP" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound4" />	
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToFP" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound4" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToFP_01" FileName="switchfixed1,switchfixed2,switchfixed3,switchfixed4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound4" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>		
 
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToIP" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound5" />	
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToIP" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToIP_01" FileName="switchinitial1,switchinitial2,switchinitial3,switchinitial4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound5" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>	
 
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToST" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound6" />	
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToST" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound6" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToST_01" FileName="switchsurface1,switchsurface2,switchsurface3,switchsurface4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound6" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
 
-<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToHB" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound7" />	
+<Sound WwiseData="true" WwiseEvent="Navigation_SwitchToHB" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound7" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="false" WwiseEvent="Navigation_SwitchToHB_01" FileName="switchhome1,switchhome2,switchhome3,switchhome4" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="SwitchDestinationSound7" >
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>		
 
 <Sound WwiseData="true" WwiseEvent="GenericAcknowledgement" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="GenericAcknowledgementSound" >
 	<Requires LocalVar="RioFemale">
