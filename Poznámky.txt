@@ -39,6 +39,7 @@ Jsou tu proměnnáé MenuIcon 1-8. Podle toho jakou mají číselnou hodnotu tak
 
 Zde se musí odehrát logika jestli má mluvit Jester, nebo ženská, dle hodnoty v proměnné z menuControl.xml
 
+Výšky pro přistání jsou ve složce checklists 
 
 =================================================
 %%%%%%%%%       systems.cfg     %%%%%%%%%%%%%%%%%
