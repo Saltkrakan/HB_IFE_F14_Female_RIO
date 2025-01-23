@@ -2281,7 +2281,7 @@ lever_generic_small_01
 </Sound>
 <Sound WwiseData="true" WwiseEvent="Altitude_19_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
 	<Requires LocalVar="RioFemale">
-		<Range LowerBound="0.0" UpperBound="0.0" />
+		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
 
