@@ -2285,47 +2285,456 @@ lever_generic_small_01
     </Requires>
 </Sound>
 
-<Sound WwiseData="true" WwiseEvent="Altitude_20" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude20k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_21" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude21k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_22" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude22k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_23" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude23k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_24" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude24k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_25" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude25k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_26" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude26k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_27" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude27k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_28" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude28k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_29" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude29k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_30" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude30k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_31" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude31k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_32" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude32k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_33" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude33k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_34" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude34k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_35" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude35k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_36" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude36k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_37" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude37k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_38" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude38k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_39" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude39k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_40" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude40k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_41" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude41k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_42" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude42k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_43" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude43k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_44" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude44k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_45" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude45k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_46" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude46k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_47" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude47k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_48" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude48k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_49" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude49k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_50" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude50k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_51" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude51k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_52" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude52k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_53" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude53k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_54" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude54k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_55" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude55k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_56" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude56k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_57" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude57k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_58" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude58k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_59" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude59k"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Altitude_60" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude60k"> <Range LowerBound="0.5" /> </Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_20" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_20_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_21" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_21_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_22" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_22_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_23" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_23_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_24" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_24_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_25" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_25_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_26" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_26_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_27" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_27_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_28" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_28_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_29" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_29_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_30" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_30_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_31" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_31_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_32" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_32_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_33" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_33_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_34" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_34_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_35" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_35_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_36" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_36_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_37" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_37_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_38" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_38_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_39" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_39_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_40" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_40_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_41" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_41_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_42" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_42_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_43" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_43_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_44" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_44_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_45" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_45_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_46" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_46_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_47" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_47_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_48" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_48_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_49" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_49_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_50" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_50_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_51" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_51_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_52" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_52_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_53" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_53_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_54" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_54_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_55" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_55_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_56" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_56_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_57" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_57_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_58" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_58_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_59" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_59_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Altitude_60" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Altitude_60_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="Altitude19k"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		<Range LowerBound="1.0" UpperBound="1.0" />
+  </Requires>
+</Sound>
 
 
 <!-- JESTER NAVIGATION ========================================================================================== --> 
