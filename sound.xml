@@ -1785,7 +1785,7 @@ lever_generic_small_01
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>	
-<!-- wwise complete -->
+<!-- wwise complete and tested in sim-->
 
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude10" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding10"> <Range LowerBound="0.5" /> 
 	<Requires LocalVar="RioFemale">
