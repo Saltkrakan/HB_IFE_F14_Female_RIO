@@ -77,4 +77,6 @@ Náhodné zvuky: https://docs.flightsimulator.com/html/Content_Configuration/Sou
 
 https://devsupport.flightsimulator.com/t/triggering-a-sound-event-from-regular-code/4526/2
 
+Wwise https://docs.flightsimulator.com/html/Asset_Creation/Sounds/Using_Wwise.htm
+
 Rockybilly font
