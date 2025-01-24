@@ -1995,7 +1995,7 @@ lever_generic_small_01
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
-<!-- wwise complete-->
+
 <Sound WwiseData="true" WwiseEvent="Landing_Altitude1500" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterLanding1500"> <Range LowerBound="0.5" /> 
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="0.0" UpperBound="0.0" />
@@ -2739,13 +2739,83 @@ lever_generic_small_01
 
 <!-- JESTER NAVIGATION ========================================================================================== --> 
 
-<Sound WwiseData="true" WwiseEvent="Navigation_FPReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationFP"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Navigation_IPReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationIP"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Navigation_STReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationST"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Navigation_WP1Reached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP1"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Navigation_WP2Reached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP2"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Navigation_WP3Reached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP3"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Navigation_HBReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationHB"> <Range LowerBound="0.5" /> </Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_FPReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationFP"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_FPReached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationFP"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Navigation_IPReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationIP"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_IPReached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationIP"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Navigation_STReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationST"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_STReached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationST"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Navigation_WP1Reached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP1"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_WP1Reached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP1"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Navigation_WP2Reached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP2"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_WP2Reached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP2"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Navigation_WP3Reached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP3"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_WP3Reached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationWP3"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Navigation_HBReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationHB"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Navigation_HBReached_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationHB"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
 
 <!-- JESTER COMMENTS ========================================================================================== --> 
 
