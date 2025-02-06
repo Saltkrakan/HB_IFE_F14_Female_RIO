@@ -3012,30 +3012,269 @@ lever_generic_small_01
 
 <!-- NAS ========================================================================================== --> 
 
-<Sound WwiseData="true" WwiseEvent="Andrews" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI201"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="BarkingSands" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI202"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="CorpusChristi" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI203"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="DahlGen" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI204"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="ElCentro" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI205"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Fallon" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI206"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="FortWorth" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI207"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Jacksonville" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI208"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="KeyWest" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI209"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Kingsville" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI210"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Lakehurst" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI211"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Leemore" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI212"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Mayport" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI213"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Meridian" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI214"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Miramar" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI215"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="NewOrleans" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI216"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Norfolk" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI217"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="NorthIsland" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI218"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Oceana" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI219"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="PatuxentRiver" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI220"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="Pensacola" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI221"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="PointMugu" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI222"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="WhidbeyIsland" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI223"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="WithingField" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI224"> <Range LowerBound="0.5" /> </Sound>
+<Sound WwiseData="true" WwiseEvent="Andrews" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI201"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Andrews_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI201"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="BarkingSands" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI202"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="BarkingSands_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI202"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="CorpusChristi" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI203"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="CorpusChristi_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI203"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="DahlGen" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI204"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="DahlGen_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI204"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="ElCentro" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI205"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="ElCentro_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI205"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Fallon" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI206"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Fallon_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI206"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="FortWorth" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI207"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="FortWorth_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI207"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Jacksonville" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI208"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Jacksonville_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI208"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="KeyWest" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI209"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="KeyWest_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI209"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Kingsville" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI210"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Kingsville_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI210"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Lakehurst" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI211"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Lakehurst_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI211"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Leemore" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI212"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Leemore_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI212"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Mayport" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI213"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Mayport_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI213"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Meridian" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI214"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Meridian_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI214"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Miramar" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI215"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Miramar_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI215"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="NewOrleans" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI216"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="NewOrleans_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI216"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Norfolk" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI217"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Norfolk_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI217"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="NorthIsland" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI218"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="NorthIsland_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI218"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Oceana" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI219"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Oceana_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI219"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="PatuxentRiver" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI220"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="PatuxentRiver_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI220"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="Pensacola" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI221"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="Pensacola_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI221"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="PointMugu" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI222"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="PointMugu_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI222"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="WhidbeyIsland" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI223"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="WhidbeyIsland_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI223"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="WithingField" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI224"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="WithingField_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterPOI224"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
 
 <!-- JESTER INS ALIGNMENT ========================================================================================== --> 
 
