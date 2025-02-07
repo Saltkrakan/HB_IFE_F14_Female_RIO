@@ -3278,21 +3278,170 @@ lever_generic_small_01
 
 <!-- JESTER INS ALIGNMENT ========================================================================================== --> 
 
-<Sound WwiseData="true" WwiseEvent="INS_WaitingForAlign" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSWaiting"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_Ready" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSReady"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_Halfway" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSHalfway"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_NotAligned" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSNotAligned"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_CommandRepeated" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSCommandRepeat"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_AlignmentOK" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignmentOK"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_AlignmentInitiated" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignmentInitiated"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_AlignCommand" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignCommand"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_AcceptingCurrent" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAcceptingCurrent"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_30sec" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS30sec"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_5min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS5min"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_4min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS4min"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_3min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS3min"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_2min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS2min"> <Range LowerBound="0.5" /> </Sound>
-<Sound WwiseData="true" WwiseEvent="INS_1min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS1min"> <Range LowerBound="0.5" /> </Sound>
+<Sound WwiseData="true" WwiseEvent="INS_WaitingForAlign" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSWaiting"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_WaitingForAlign_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSWaiting"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_Ready" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSReady"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_Ready_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSReady"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_Halfway" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSHalfway"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_Halfway_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSHalfway"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_NotAligned" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSNotAligned"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_NotAligned_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSNotAligned"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_CommandRepeated" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSCommandRepeat"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_CommandRepeated_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSCommandRepeat"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_AlignmentOK" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignmentOK"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_AlignmentOK_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignmentOK"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_AlignmentInitiated" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignmentInitiated"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_AlignmentInitiated_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignmentInitiated"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_AlignCommand" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignCommand"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_AlignCommand_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAlignCommand"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_AcceptingCurrent" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAcceptingCurrent"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_AcceptingCurrent_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINSAcceptingCurrent"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_30sec" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS30sec"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_30sec_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS30sec"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_5min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS5min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_5min_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS5min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_4min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS4min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_4min_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS4min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_3min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS3min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_3min_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS3min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_2min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS2min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_2min_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS2min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
+
+<Sound WwiseData="true" WwiseEvent="INS_1min" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS1min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="0.0" UpperBound="0.0" />
+    </Requires>
+</Sound>
+<Sound WwiseData="true" WwiseEvent="INS_1min_Ska" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterINS1min"> <Range LowerBound="0.5" /> 
+	<Requires LocalVar="RioFemale">
+		  <Range LowerBound="1.0" UpperBound="1.0" />
+    </Requires>
+</Sound>
 
 <!-- JESTER FUEL ========================================================================================== --> 
 
