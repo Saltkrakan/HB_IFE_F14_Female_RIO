@@ -2039,7 +2039,7 @@ lever_generic_small_01
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
-<!-- wwise complete-->
+
 <Sound WwiseData="true" WwiseEvent="300WingsAuto" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterTakeoff300ktsWingsAuto"> <Range LowerBound="0.5" /> 
 	<Requires LocalVar="RioFemale">
 		<Range LowerBound="0.0" UpperBound="0.0" />
@@ -2083,7 +2083,6 @@ lever_generic_small_01
 		<Range LowerBound="1.0" UpperBound="1.0" />
     </Requires>
 </Sound>
-
 
 <!-- JESTER ALTITUDE ========================================================================================== --> 
 
@@ -2736,7 +2735,7 @@ lever_generic_small_01
   </Requires>
 </Sound>
 
-
+<!-- wwise complete-->
 <!-- JESTER NAVIGATION ========================================================================================== --> 
 
 <Sound WwiseData="true" WwiseEvent="Navigation_FPReached" Continuous="false" ViewPoint="All" NodeName="EjectionSeatAudio" LocalVar="JesterNavigationFP"> <Range LowerBound="0.5" /> 

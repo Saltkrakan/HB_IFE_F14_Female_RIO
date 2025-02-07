@@ -1,0 +1,11 @@
+JesterTakeoff300ktsWingsAuto	- Three hundret knots, wings auto.
+								- Three hundret, wings auto.
+								
+JesterTakeoffPositiveRate		- Positive climb, gear up!
+								- Positive rate, gear up.
+								
+JesterLanding250GearsDown		- Two-fifty, gears.
+								- Two-fifty, gear down.
+								
+JesterLanding225FlapsDownDLC	- Two-twenty-five, flaps, DLC extended.
+								- Two-twenty-five, flaps down, DLC extended.
