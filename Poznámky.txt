@@ -80,3 +80,7 @@ https://devsupport.flightsimulator.com/t/triggering-a-sound-event-from-regular-c
 Wwise https://docs.flightsimulator.com/html/Asset_Creation/Sounds/Using_Wwise.htm
 
 Rockybilly font
+
+https://micmonster.com/ Nova Turbo Multilingual or Sara
+
+Intercom noise - udělat s wwise
